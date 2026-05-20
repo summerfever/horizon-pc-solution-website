@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Horizon PC Solution — Future-Driven Digital Marketing</title>
+<meta name="description" content="Horizon PC Solution is a modern digital marketing agency for influencer campaigns, paid advertising, and scalable media operations built for the next generation of online business." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@300;400;500;600;700&family=Major+Mono+Display&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#05010f',
+          navy: '#0a0524',
+          neon: {
+            purple: '#a855f7',
+            pink: '#ff2bd6',
+            magenta: '#ff00aa',
+            blue: '#3b82f6',
+            cyan: '#22d3ee',
+            violet: '#7c3aed',
+          }
+        },
+        fontFamily: {
+          display: ['Orbitron', 'sans-serif'],
+          mono: ['"Major Mono Display"', 'monospace'],
+          sans: ['Inter', 'system-ui', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+  :root {
+    --c-bg: #05010f;
+    --c-bg-2: #0a0524;
+    --c-purple: #a855f7;
+    --c-pink: #ff2bd6;
+    --c-magenta: #ff00aa;
+    --c-cyan: #22d3ee;
+    --c-blue: #3b82f6;
+    --c-violet: #7c3aed;
+  }
+
+  * { -webkit-font-smoothing: antialiased; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--c-bg);
+    color: #e8e7ff;
+    font-family: 'Inter', system-ui, sans-serif;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* ===== Global atmospheric background ===== */
+  .bg-atmosphere {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(168, 85, 247, 0.25), transparent 60%),
+      radial-gradient(ellipse 60% 50% at 80% 100%, rgba(255, 43, 214, 0.18), transparent 60%),
+      radial-gradient(ellipse 60% 50% at 10% 90%, rgba(34, 211, 238, 0.15), transparent 60%),
+      linear-gradient(180deg, #05010f 0%, #0a0524 50%, #05010f 100%);
+  }
+
+  .bg-grain {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .scanlines::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 2px,
+      rgba(168, 85, 247, 0.03) 2px,
+      rgba(168, 85, 247, 0.03) 3px
+    );
+    mix-blend-mode: overlay;
+  }
+
+  /* ===== Typography ===== */
+  .h-display {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    line-height: 1;
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #fff 0%, #ff2bd6 40%, #a855f7 70%, #22d3ee 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .text-glow-pink   { text-shadow: 0 0 14px rgba(255, 43, 214, 0.6), 0 0 30px rgba(255, 43, 214, 0.35); }
+  .text-glow-cyan   { text-shadow: 0 0 14px rgba(34, 211, 238, 0.6), 0 0 30px rgba(34, 211, 238, 0.35); }
+  .text-glow-purple { text-shadow: 0 0 14px rgba(168, 85, 247, 0.6), 0 0 30px rgba(168, 85, 247, 0.35); }
+
+  /* ===== Buttons ===== */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.9rem 1.6rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    transition: all 0.3s cubic-bezier(.2,.7,.3,1);
+    position: relative;
+    white-space: nowrap;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #ff2bd6 0%, #a855f7 60%, #3b82f6 100%);
+    color: #fff;
+    box-shadow:
+      0 0 0 1px rgba(255, 43, 214, 0.4),
+      0 10px 30px -8px rgba(255, 43, 214, 0.6),
+      0 0 30px rgba(168, 85, 247, 0.35);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 0 0 1px rgba(255, 43, 214, 0.7),
+      0 16px 40px -8px rgba(255, 43, 214, 0.8),
+      0 0 50px rgba(168, 85, 247, 0.55);
+  }
+
+  .btn-ghost {
+    color: #e8e7ff;
+    border: 1px solid rgba(168, 85, 247, 0.45);
+    background: rgba(168, 85, 247, 0.06);
+    backdrop-filter: blur(8px);
+  }
+  .btn-ghost:hover {
+    border-color: rgba(34, 211, 238, 0.8);
+    background: rgba(34, 211, 238, 0.08);
+    color: #fff;
+    box-shadow: 0 0 24px rgba(34, 211, 238, 0.35);
+  }
+
+  /* ===== Nav ===== */
+  .nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 50;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: rgba(5, 1, 15, 0.45);
+    border-bottom: 1px solid rgba(168, 85, 247, 0.15);
+  }
+  .nav.scrolled {
+    background: rgba(5, 1, 15, 0.75);
+    border-bottom: 1px solid rgba(168, 85, 247, 0.35);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  }
+  .nav a.link {
+    position: relative;
+    color: #c9c6e8;
+    font-weight: 500;
+    transition: color 0.25s ease;
+  }
+  .nav a.link::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: -6px;
+    height: 1px;
+    background: linear-gradient(90deg, #ff2bd6, #22d3ee);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  .nav a.link:hover { color: #fff; }
+  .nav a.link:hover::after { transform: scaleX(1); }
+
+  .logo-mark {
+    width: 32px; height: 32px;
+    border-radius: 8px;
+    background:
+      radial-gradient(circle at 30% 30%, #ff2bd6, transparent 60%),
+      linear-gradient(135deg, #a855f7, #3b82f6);
+    box-shadow: 0 0 18px rgba(168, 85, 247, 0.6), inset 0 0 12px rgba(255, 43, 214, 0.5);
+    position: relative;
+    overflow: hidden;
+  }
+  .logo-mark::before {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 8px rgba(34, 211, 238, 0.8);
+  }
+  .logo-mark::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; top: 60%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #22d3ee, transparent);
+    box-shadow: 0 0 10px #22d3ee;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    padding-top: 6rem;
+  }
+
+  /* Retro sun */
+  .hero-sun {
+    position: absolute;
+    left: 50%;
+    bottom: 38%;
+    transform: translateX(-50%);
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #ffe600 0%, #ff8a00 35%, #ff2bd6 65%, #a855f7 100%);
+    filter: blur(0.5px);
+    box-shadow:
+      0 0 80px rgba(255, 43, 214, 0.5),
+      0 0 160px rgba(168, 85, 247, 0.4);
+    z-index: 0;
+    opacity: 0.95;
+  }
+  .hero-sun::before {
+    /* horizontal slats */
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background:
+      repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 18px,
+        rgba(5, 1, 15, 0.95) 18px,
+        rgba(5, 1, 15, 0.95) 22px
+      );
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 45%, black 50%, black 100%);
+            mask-image: linear-gradient(to bottom, transparent 0%, transparent 45%, black 50%, black 100%);
+  }
+
+  /* Retro grid floor */
+  .hero-grid {
+    position: absolute;
+    left: -10%;
+    right: -10%;
+    bottom: 0;
+    height: 55%;
+    perspective: 600px;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .hero-grid-inner {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, rgba(255, 43, 214, 0.55) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(34, 211, 238, 0.55) 1px, transparent 1px);
+    background-size: 60px 60px;
+    transform: rotateX(60deg) translateZ(0);
+    transform-origin: bottom center;
+    animation: gridMove 10s linear infinite;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 100%);
+            mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 100%);
+    box-shadow: 0 0 60px rgba(255, 43, 214, 0.25);
+  }
+  .hero-grid-inner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(5, 1, 15, 0.6) 80%, rgba(5, 1, 15, 1) 100%);
+  }
+  @keyframes gridMove {
+    from { background-position: 0 0; }
+    to   { background-position: 0 60px; }
+  }
+
+  /* Particles */
+  .particles {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .particle {
+    position: absolute;
+    width: 3px; height: 3px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 8px currentColor;
+    animation: float linear infinite;
+  }
+  @keyframes float {
+    from { transform: translateY(0); opacity: 0; }
+    10%  { opacity: 1; }
+    90%  { opacity: 1; }
+    to   { transform: translateY(-120vh); opacity: 0; }
+  }
+
+  /* Hero floating cards */
+  .hero-card {
+    position: absolute;
+    z-index: 3;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.14), rgba(34, 211, 238, 0.06));
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    padding: 1rem 1.2rem;
+    box-shadow:
+      0 20px 60px -10px rgba(168, 85, 247, 0.35),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    animation: floaty 6s ease-in-out infinite;
+  }
+  .hero-card.delay-1 { animation-delay: -1.5s; }
+  .hero-card.delay-2 { animation-delay: -3s; }
+
+  @keyframes floaty {
+    0%, 100% { transform: translateY(0) rotate(var(--rot, 0deg)); }
+    50%      { transform: translateY(-12px) rotate(var(--rot, 0deg)); }
+  }
+
+  .sparkline {
+    width: 100%; height: 32px;
+  }
+
+  /* ===== Section labels ===== */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #22d3ee;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid rgba(34, 211, 238, 0.4);
+    border-radius: 9999px;
+    background: rgba(34, 211, 238, 0.06);
+    text-shadow: 0 0 12px rgba(34, 211, 238, 0.5);
+  }
+  .eyebrow .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #22d3ee;
+    box-shadow: 0 0 10px #22d3ee;
+    animation: pulse 1.8s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%      { opacity: 0.5; transform: scale(1.5); }
+  }
+
+  /* ===== Glass cards ===== */
+  .glass {
+    position: relative;
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.08), rgba(34, 211, 238, 0.04));
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(168, 85, 247, 0.25);
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(.2,.7,.3,1);
+    overflow: hidden;
+  }
+  .glass::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(255, 43, 214, 0.5), transparent 40%, transparent 60%, rgba(34, 211, 238, 0.5));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0.7;
+  }
+  .glass:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 43, 214, 0.6);
+    box-shadow:
+      0 30px 60px -20px rgba(255, 43, 214, 0.4),
+      0 0 40px rgba(168, 85, 247, 0.3);
+  }
+  .glass:hover::before { opacity: 1; }
+
+  /* Service card extra */
+  .service-card .icon-box {
+    width: 56px; height: 56px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(255, 43, 214, 0.2), rgba(34, 211, 238, 0.1));
+    border: 1px solid rgba(255, 43, 214, 0.4);
+    box-shadow: 0 0 24px rgba(255, 43, 214, 0.3), inset 0 0 12px rgba(168, 85, 247, 0.25);
+    color: #ff2bd6;
+    transition: all 0.4s ease;
+  }
+  .service-card:hover .icon-box {
+    color: #22d3ee;
+    border-color: rgba(34, 211, 238, 0.7);
+    box-shadow: 0 0 28px rgba(34, 211, 238, 0.45), inset 0 0 12px rgba(34, 211, 238, 0.3);
+    transform: rotate(-6deg) scale(1.05);
+  }
+
+  /* Neon hr line */
+  .neon-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 43, 214, 0.7), rgba(34, 211, 238, 0.7), transparent);
+    box-shadow: 0 0 12px rgba(168, 85, 247, 0.6);
+  }
+
+  /* ===== Form ===== */
+  .field {
+    width: 100%;
+    padding: 1rem 1.1rem;
+    background: rgba(5, 1, 15, 0.6);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    border-radius: 14px;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    outline: none;
+  }
+  .field::placeholder { color: rgba(232, 231, 255, 0.4); }
+  .field:focus {
+    border-color: #ff2bd6;
+    box-shadow: 0 0 0 3px rgba(255, 43, 214, 0.15), 0 0 24px rgba(255, 43, 214, 0.3);
+    background: rgba(5, 1, 15, 0.8);
+  }
+  .field-label {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #c9c6e8;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  /* ===== Reveal animations ===== */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s ease, transform 0.8s cubic-bezier(.2,.7,.3,1);
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ===== Marquee ticker ===== */
+  .ticker {
+    overflow: hidden;
+    border-top: 1px solid rgba(168, 85, 247, 0.2);
+    border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+    background: rgba(168, 85, 247, 0.04);
+    padding: 0.9rem 0;
+  }
+  .ticker-track {
+    display: flex;
+    gap: 3rem;
+    white-space: nowrap;
+    animation: tickerMove 30s linear infinite;
+  }
+  @keyframes tickerMove {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  .ticker-item {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    color: #c9c6e8;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .ticker-item .star {
+    color: #ff2bd6;
+    text-shadow: 0 0 10px #ff2bd6;
+  }
+
+  /* Mobile nav */
+  .mobile-menu {
+    transform: translateY(-110%);
+    transition: transform 0.4s cubic-bezier(.2,.7,.3,1);
+  }
+  .mobile-menu.open { transform: translateY(0); }
+
+  /* Section spacing helper */
+  section { position: relative; }
+
+  /* CRT corner brackets */
+  .bracket {
+    position: absolute;
+    width: 18px; height: 18px;
+    border-color: rgba(34, 211, 238, 0.7);
+  }
+  .bracket.tl { top: 12px; left: 12px; border-top: 1px solid; border-left: 1px solid; }
+  .bracket.tr { top: 12px; right: 12px; border-top: 1px solid; border-right: 1px solid; }
+  .bracket.bl { bottom: 12px; left: 12px; border-bottom: 1px solid; border-left: 1px solid; }
+  .bracket.br { bottom: 12px; right: 12px; border-bottom: 1px solid; border-right: 1px solid; }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .hero-sun { width: 340px; height: 340px; bottom: 42%; }
+    .hero-card { display: none; }
+  }
+</style>
+</head>
+
+<body class="scanlines">
+
+<div class="bg-atmosphere"></div>
+<div class="bg-grain"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 h-16 md:h-[72px] flex items-center justify-between">
+    <a href="#home" class="flex items-center gap-3 group">
+      <span class="logo-mark"></span>
+      <span class="h-display text-[15px] md:text-[16px] tracking-wider text-white">
+        HORIZON <span class="text-neon-pink text-glow-pink">PC</span> SOLUTION
+      </span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-9">
+      <a href="#home" class="link text-sm">Home</a>
+      <a href="#about" class="link text-sm">About</a>
+      <a href="#services" class="link text-sm">Services</a>
+      <a href="#contact" class="link text-sm">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a href="#contact" class="btn btn-primary hidden sm:inline-flex text-sm">
+        Launch Campaign
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <button id="menuBtn" class="md:hidden w-10 h-10 rounded-lg border border-neon-purple/40 text-white grid place-items-center" aria-label="Open menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="mobile-menu md:hidden absolute left-0 right-0 top-16 bg-ink/95 backdrop-blur-xl border-b border-neon-purple/30 px-5 py-6">
+    <nav class="flex flex-col gap-4">
+      <a href="#home" class="link text-base py-2">Home</a>
+      <a href="#about" class="link text-base py-2">About</a>
+      <a href="#services" class="link text-base py-2">Services</a>
+      <a href="#contact" class="link text-base py-2">Contact</a>
+      <a href="#contact" class="btn btn-primary justify-center mt-2">Launch Campaign</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="hero">
+  <div class="hero-sun"></div>
+  <div class="hero-grid"><div class="hero-grid-inner"></div></div>
+
+  <div class="particles" id="particles"></div>
+
+  <!-- Floating cards -->
+  <div class="hero-card hidden lg:block delay-1" style="top: 22%; left: 4%; width: 220px; --rot: -4deg;">
+    <div class="flex items-center justify-between mb-2">
+      <span class="font-display text-[10px] tracking-[0.25em] text-neon-cyan">CTR · LIVE</span>
+      <span class="w-2 h-2 rounded-full bg-neon-pink shadow-[0_0_10px_#ff2bd6]"></span>
+    </div>
+    <div class="font-display text-2xl text-white text-glow-pink">8.42%</div>
+    <div class="text-[11px] text-white/60 mt-1">▲ 2.1% vs last week</div>
+    <svg class="sparkline mt-2" viewBox="0 0 200 32" preserveAspectRatio="none">
+      <polyline fill="none" stroke="url(#g1)" stroke-width="2" points="0,24 20,20 40,22 60,14 80,18 100,10 120,12 140,6 160,9 180,4 200,2"/>
+      <defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#ff2bd6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs>
+    </svg>
+  </div>
+
+  <div class="hero-card hidden lg:block" style="top: 30%; right: 5%; width: 240px; --rot: 5deg;">
+    <div class="flex items-center justify-between mb-2">
+      <span class="font-display text-[10px] tracking-[0.25em] text-neon-cyan">CAMPAIGN ROI</span>
+      <span class="text-[10px] text-white/50">Q2</span>
+    </div>
+    <div class="font-display text-2xl text-white text-glow-cyan">4.7×</div>
+    <div class="flex items-end gap-1 mt-3 h-8">
+      <span class="flex-1 bg-gradient-to-t from-neon-purple to-neon-pink rounded-sm" style="height: 30%"></span>
+      <span class="flex-1 bg-gradient-to-t from-neon-purple to-neon-pink rounded-sm" style="height: 55%"></span>
+      <span class="flex-1 bg-gradient-to-t from-neon-purple to-neon-pink rounded-sm" style="height: 40%"></span>
+      <span class="flex-1 bg-gradient-to-t from-neon-purple to-neon-pink rounded-sm" style="height: 75%"></span>
+      <span class="flex-1 bg-gradient-to-t from-neon-pink to-neon-cyan rounded-sm" style="height: 90%"></span>
+      <span class="flex-1 bg-gradient-to-t from-neon-pink to-neon-cyan rounded-sm" style="height: 100%"></span>
+    </div>
+  </div>
+
+  <div class="hero-card hidden xl:block delay-2" style="bottom: 14%; right: 9%; width: 230px; --rot: -3deg;">
+    <div class="flex items-center gap-2 mb-2">
+      <span class="w-8 h-8 rounded-full bg-gradient-to-br from-neon-pink to-neon-purple grid place-items-center text-[10px] font-bold">@K</span>
+      <div>
+        <div class="text-xs text-white/90 font-semibold">@kairo.live</div>
+        <div class="text-[10px] text-white/50">Creator · 1.2M</div>
+      </div>
+    </div>
+    <div class="font-display text-[11px] tracking-[0.2em] text-neon-cyan mb-1">REACH</div>
+    <div class="font-display text-xl text-white text-glow-purple">3.4M <span class="text-xs text-neon-pink">+18%</span></div>
+  </div>
+
+  <!-- Hero content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8 pt-16 md:pt-24 pb-32 md:pb-40">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="eyebrow reveal mb-8">
+        <span class="dot"></span>
+        Digital Marketing · Est. 2026
+      </div>
+
+      <h1 class="h-display text-[44px] sm:text-6xl md:text-7xl lg:text-[88px] reveal mb-7">
+        <span class="block text-white text-glow-purple">Future-Driven</span>
+        <span class="block text-white text-glow-pink">Digital Marketing</span>
+      </h1>
+
+      <p class="reveal text-base md:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed mb-10">
+        Horizon PC Solution helps brands grow through influencer campaigns, digital advertising,
+        and scalable media operations designed for the next generation of online business.
+      </p>
+
+      <div class="reveal flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="#contact" class="btn btn-primary">
+          Start Growing
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#services" class="btn btn-ghost">
+          Explore Services
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="reveal mt-20 grid grid-cols-3 gap-4 md:gap-8 max-w-2xl mx-auto">
+        <div>
+          <div class="h-display text-2xl md:text-3xl text-gradient">240+</div>
+          <div class="text-[11px] md:text-xs text-white/50 tracking-[0.2em] uppercase mt-1">Campaigns Run</div>
+        </div>
+        <div>
+          <div class="h-display text-2xl md:text-3xl text-gradient">3.8×</div>
+          <div class="text-[11px] md:text-xs text-white/50 tracking-[0.2em] uppercase mt-1">Avg ROAS</div>
+        </div>
+        <div>
+          <div class="h-display text-2xl md:text-3xl text-gradient">120M+</div>
+          <div class="text-[11px] md:text-xs text-white/50 tracking-[0.2em] uppercase mt-1">Reach Delivered</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll hint -->
+  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden md:flex flex-col items-center gap-2 text-white/40">
+    <span class="text-[10px] tracking-[0.3em] font-display">SCROLL</span>
+    <span class="w-px h-10 bg-gradient-to-b from-neon-cyan to-transparent"></span>
+  </div>
+</section>
+
+<!-- ============ MARQUEE TICKER ============ -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="ticker-item">Influencer Marketing <span class="star">✦</span></span>
+    <span class="ticker-item">Paid Media <span class="star">✦</span></span>
+    <span class="ticker-item">eCommerce Growth <span class="star">✦</span></span>
+    <span class="ticker-item">Creator Campaigns <span class="star">✦</span></span>
+    <span class="ticker-item">Scalable Ad Ops <span class="star">✦</span></span>
+    <span class="ticker-item">Social-First Strategy <span class="star">✦</span></span>
+    <span class="ticker-item">Performance Marketing <span class="star">✦</span></span>
+    <!-- duplicate for seamless loop -->
+    <span class="ticker-item">Influencer Marketing <span class="star">✦</span></span>
+    <span class="ticker-item">Paid Media <span class="star">✦</span></span>
+    <span class="ticker-item">eCommerce Growth <span class="star">✦</span></span>
+    <span class="ticker-item">Creator Campaigns <span class="star">✦</span></span>
+    <span class="ticker-item">Scalable Ad Ops <span class="star">✦</span></span>
+    <span class="ticker-item">Social-First Strategy <span class="star">✦</span></span>
+    <span class="ticker-item">Performance Marketing <span class="star">✦</span></span>
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="py-28 md:py-40">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+      <div>
+        <div class="eyebrow reveal mb-6"><span class="dot"></span>About the Agency</div>
+        <h2 class="reveal h-display text-4xl md:text-5xl lg:text-6xl text-white mb-7 leading-[1.05]">
+          Built for the <br/>
+          <span class="text-gradient">Modern Digital Era</span>
+        </h2>
+        <p class="reveal text-white/70 text-lg leading-relaxed mb-6">
+          Horizon PC Solution is a modern digital marketing agency combining influencer campaigns,
+          paid advertising, and scalable advertising support to help brands grow in today's
+          fast-moving digital landscape.
+        </p>
+        <p class="reveal text-white/60 leading-relaxed mb-8">
+          We partner with eCommerce, gaming, tech, and creator-driven brands — turning bold ideas
+          into measurable growth across every channel that matters.
+        </p>
+        <div class="reveal flex flex-wrap gap-3">
+          <span class="px-4 py-2 rounded-full border border-neon-purple/40 text-xs font-display tracking-widest text-white/80 bg-neon-purple/5">eCOMMERCE</span>
+          <span class="px-4 py-2 rounded-full border border-neon-cyan/40 text-xs font-display tracking-widest text-white/80 bg-neon-cyan/5">GAMING</span>
+          <span class="px-4 py-2 rounded-full border border-neon-pink/40 text-xs font-display tracking-widest text-white/80 bg-neon-pink/5">CREATORS</span>
+          <span class="px-4 py-2 rounded-full border border-neon-violet/40 text-xs font-display tracking-widest text-white/80 bg-neon-violet/5">SaaS &amp; STARTUPS</span>
+        </div>
+      </div>
+
+      <!-- Value cards -->
+      <div class="grid gap-5">
+        <!-- card 1 -->
+        <div class="reveal glass p-6 md:p-7 relative">
+          <span class="bracket tl"></span><span class="bracket tr"></span>
+          <span class="bracket bl"></span><span class="bracket br"></span>
+          <div class="flex items-start gap-5">
+            <div class="shrink-0 w-14 h-14 rounded-xl border border-neon-pink/50 bg-neon-pink/10 grid place-items-center text-neon-pink shadow-[0_0_24px_rgba(255,43,214,0.35)_inset,0_0_18px_rgba(255,43,214,0.25)]">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.4"/><path d="M3 20c1.5-3.5 4-5 6-5s4.5 1.5 6 5"/><path d="M14 18c.8-2 2-3 3-3s2 .7 2.5 2"/></svg>
+            </div>
+            <div>
+              <h3 class="h-display text-lg text-white mb-1 tracking-wide">Influencer &amp; Creator Campaigns</h3>
+              <p class="text-white/65 text-sm leading-relaxed">
+                Match your brand with the right creators and run modern, story-driven campaigns that move audiences.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 2 -->
+        <div class="reveal glass p-6 md:p-7 relative md:ml-8">
+          <span class="bracket tl"></span><span class="bracket tr"></span>
+          <span class="bracket bl"></span><span class="bracket br"></span>
+          <div class="flex items-start gap-5">
+            <div class="shrink-0 w-14 h-14 rounded-xl border border-neon-cyan/50 bg-neon-cyan/10 grid place-items-center text-neon-cyan shadow-[0_0_24px_rgba(34,211,238,0.35)_inset,0_0_18px_rgba(34,211,238,0.25)]">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 4 8-8"/><path d="M14 8h7v7"/></svg>
+            </div>
+            <div>
+              <h3 class="h-display text-lg text-white mb-1 tracking-wide">Digital Advertising Operations</h3>
+              <p class="text-white/65 text-sm leading-relaxed">
+                Full-funnel ad management — from creative to optimization — built to deliver consistent performance.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 3 -->
+        <div class="reveal glass p-6 md:p-7 relative">
+          <span class="bracket tl"></span><span class="bracket tr"></span>
+          <span class="bracket bl"></span><span class="bracket br"></span>
+          <div class="flex items-start gap-5">
+            <div class="shrink-0 w-14 h-14 rounded-xl border border-neon-purple/50 bg-neon-purple/10 grid place-items-center text-neon-purple shadow-[0_0_24px_rgba(168,85,247,0.35)_inset,0_0_18px_rgba(168,85,247,0.25)]">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20V8"/></svg>
+            </div>
+            <div>
+              <h3 class="h-display text-lg text-white mb-1 tracking-wide">Scalable Media Buying Support</h3>
+              <p class="text-white/65 text-sm leading-relaxed">
+                Account access, infrastructure, and operational support so you can scale campaigns without friction.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="neon-line max-w-6xl mx-auto"></div>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="py-28 md:py-40">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+      <div class="eyebrow reveal mb-6"><span class="dot"></span>Our Services</div>
+      <h2 class="reveal h-display text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-[1.05]">
+        Engineered for <span class="text-gradient">Growth</span>
+      </h2>
+      <p class="reveal text-white/65 text-lg leading-relaxed">
+        Five core services, one mission — help modern brands move faster, reach further,
+        and convert with style.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- 1 -->
+      <article class="reveal glass service-card p-7">
+        <div class="flex items-center justify-between mb-6">
+          <div class="icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h3l3-8 4 16 3-8h5"/></svg>
+          </div>
+          <span class="font-display text-xs text-white/30">01</span>
+        </div>
+        <h3 class="h-display text-xl text-white mb-3 tracking-wide">Digital Marketing</h3>
+        <p class="text-white/65 text-sm leading-relaxed">
+          Launch and optimize digital advertising campaigns designed to increase visibility and drive online growth.
+        </p>
+      </article>
+
+      <!-- 2 -->
+      <article class="reveal glass service-card p-7">
+        <div class="flex items-center justify-between mb-6">
+          <div class="icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/><path d="M19 4l2 2-2 2M21 6h-5"/></svg>
+          </div>
+          <span class="font-display text-xs text-white/30">02</span>
+        </div>
+        <h3 class="h-display text-xl text-white mb-3 tracking-wide">Influencer Marketing</h3>
+        <p class="text-white/65 text-sm leading-relaxed">
+          Connect brands with creators and influencers to build engaging, modern social campaigns that resonate.
+        </p>
+      </article>
+
+      <!-- 3 -->
+      <article class="reveal glass service-card p-7">
+        <div class="flex items-center justify-between mb-6">
+          <div class="icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12c0 5-4 8-9 8-1.5 0-3-.3-4-1l-5 1 1-4c-1-1.5-1.5-3-1.5-4 0-5 4-8 9-8s9.5 3 9.5 8z"/></svg>
+          </div>
+          <span class="font-display text-xs text-white/30">03</span>
+        </div>
+        <h3 class="h-display text-xl text-white mb-3 tracking-wide">Social Media Campaigns</h3>
+        <p class="text-white/65 text-sm leading-relaxed">
+          Develop high-impact campaigns engineered for the rhythm of modern social platforms and audiences.
+        </p>
+      </article>
+
+      <!-- 4 -->
+      <article class="reveal glass service-card p-7">
+        <div class="flex items-center justify-between mb-6">
+          <div class="icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/><path d="M8 15h3"/></svg>
+          </div>
+          <span class="font-display text-xs text-white/30">04</span>
+        </div>
+        <h3 class="h-display text-xl text-white mb-3 tracking-wide">Ad Account Rental &amp; Support</h3>
+        <p class="text-white/65 text-sm leading-relaxed">
+          Provide advertising account access and operational support for scalable, uninterrupted campaign execution.
+        </p>
+      </article>
+
+      <!-- 5 -->
+      <article class="reveal glass service-card p-7">
+        <div class="flex items-center justify-between mb-6">
+          <div class="icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>
+          </div>
+          <span class="font-display text-xs text-white/30">05</span>
+        </div>
+        <h3 class="h-display text-xl text-white mb-3 tracking-wide">Campaign Strategy</h3>
+        <p class="text-white/65 text-sm leading-relaxed">
+          Build performance-focused advertising strategies tailored for modern online businesses and growth goals.
+        </p>
+      </article>
+
+      <!-- CTA card -->
+      <article class="reveal relative overflow-hidden p-7 rounded-[20px] flex flex-col justify-between"
+               style="background: linear-gradient(135deg, #ff2bd6 0%, #a855f7 60%, #3b82f6 100%); box-shadow: 0 30px 60px -20px rgba(255,43,214,0.55), 0 0 40px rgba(168,85,247,0.4);">
+        <div class="absolute inset-0 opacity-25" style="background-image: linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px); background-size: 24px 24px;"></div>
+        <div class="relative">
+          <span class="font-display text-[10px] tracking-[0.3em] text-white/80">→ NEXT MOVE</span>
+          <h3 class="h-display text-2xl text-white mt-4 leading-tight">
+            Got a different<br/>challenge in mind?
+          </h3>
+        </div>
+        <a href="#contact" class="relative inline-flex items-center gap-2 mt-6 text-white font-semibold text-sm">
+          Talk to our team
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="py-28 md:py-40 relative overflow-hidden">
+  <!-- backdrop sun -->
+  <div class="absolute left-1/2 -translate-x-1/2 -top-32 w-[600px] h-[600px] rounded-full opacity-30 pointer-events-none"
+       style="background: radial-gradient(circle, #ff2bd6 0%, #a855f7 40%, transparent 70%); filter: blur(40px);"></div>
+
+  <div class="max-w-5xl mx-auto px-5 md:px-8 relative">
+    <div class="text-center mb-14">
+      <div class="eyebrow reveal mb-6"><span class="dot"></span>Get in Touch</div>
+      <h2 class="reveal h-display text-4xl md:text-5xl lg:text-6xl text-white mb-5 leading-[1.05]">
+        Ready to Enter <br/>
+        the <span class="text-gradient">Next Level?</span>
+      </h2>
+      <p class="reveal text-white/65 text-lg max-w-xl mx-auto leading-relaxed">
+        Tell us about your brand and campaign goals — let's build something that stands out.
+      </p>
+    </div>
+
+    <div class="reveal glass p-6 md:p-10 relative">
+      <span class="bracket tl"></span><span class="bracket tr"></span>
+      <span class="bracket bl"></span><span class="bracket br"></span>
+
+      <form id="contactForm" class="grid md:grid-cols-2 gap-5 md:gap-6" novalidate>
+        <div>
+          <label class="field-label" for="name">Name</label>
+          <input id="name" name="name" type="text" class="field" placeholder="Your full name" required />
+        </div>
+        <div>
+          <label class="field-label" for="email">Email</label>
+          <input id="email" name="email" type="email" class="field" placeholder="you@brand.com" required />
+        </div>
+        <div class="md:col-span-2">
+          <label class="field-label" for="company">Company</label>
+          <input id="company" name="company" type="text" class="field" placeholder="Brand or organization" />
+        </div>
+        <div class="md:col-span-2">
+          <label class="field-label" for="message">Message</label>
+          <textarea id="message" name="message" rows="5" class="field resize-none" placeholder="Tell us about your goals, channels, and timeline..." required></textarea>
+        </div>
+        <div class="md:col-span-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mt-2">
+          <p class="text-xs text-white/45">By submitting, you agree to be contacted by Horizon PC Solution.</p>
+          <button type="submit" class="btn btn-primary">
+            Send Message
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+        <div id="formSuccess" class="md:col-span-2 hidden text-center py-4 px-5 rounded-xl border border-neon-cyan/50 bg-neon-cyan/10 text-neon-cyan text-sm">
+          ✦ Transmission received. We'll be in touch within 24 hours.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="border-t border-neon-purple/20 pt-20 pb-10 mt-10 relative">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="grid md:grid-cols-[1.4fr_1fr_1fr_1fr] gap-10 md:gap-14 mb-14">
+      <div>
+        <a href="#home" class="flex items-center gap-3 mb-5">
+          <span class="logo-mark"></span>
+          <span class="h-display text-[15px] tracking-wider text-white">
+            HORIZON <span class="text-neon-pink text-glow-pink">PC</span> SOLUTION
+          </span>
+        </a>
+        <p class="text-white/55 text-sm leading-relaxed max-w-sm">
+          A modern digital marketing agency for the next generation of online brands.
+          Influencer campaigns, performance ads, and scalable media operations — built with style.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-display text-xs tracking-[0.25em] text-neon-cyan mb-5">EXPLORE</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#about" class="text-white/65 hover:text-white transition">About</a></li>
+          <li><a href="#services" class="text-white/65 hover:text-white transition">Services</a></li>
+          <li><a href="#contact" class="text-white/65 hover:text-white transition">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-display text-xs tracking-[0.25em] text-neon-cyan mb-5">CONTACT</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="mailto:hello@horizonpc.solutions" class="text-white/65 hover:text-neon-pink transition">hello@horizonpc.solutions</a></li>
+          <li class="text-white/55">Mon — Fri · 09:00 – 18:00</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-display text-xs tracking-[0.25em] text-neon-cyan mb-5">FOLLOW</h4>
+        <div class="flex gap-3">
+          <a href="#" aria-label="Instagram" class="w-10 h-10 grid place-items-center rounded-lg border border-neon-purple/40 text-white/80 hover:text-neon-pink hover:border-neon-pink/70 hover:shadow-[0_0_20px_rgba(255,43,214,0.4)] transition">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="TikTok" class="w-10 h-10 grid place-items-center rounded-lg border border-neon-purple/40 text-white/80 hover:text-neon-cyan hover:border-neon-cyan/70 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 3v3.5a4 4 0 0 0 4 4V14a7 7 0 0 1-4-1.3V16a5.5 5.5 0 1 1-5.5-5.5v3.2a2.3 2.3 0 1 0 2.3 2.3V3H16z"/></svg>
+          </a>
+          <a href="#" aria-label="X" class="w-10 h-10 grid place-items-center rounded-lg border border-neon-purple/40 text-white/80 hover:text-white hover:border-white/60 hover:shadow-[0_0_20px_rgba(255,255,255,0.25)] transition">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2H21l-6.51 7.43L22 22h-6.797l-4.78-6.24L4.8 22H2l7-7.99L2 2h6.95l4.32 5.74L18.244 2zm-1.19 18h1.66L7.03 4H5.26l11.794 16z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="w-10 h-10 grid place-items-center rounded-lg border border-neon-purple/40 text-white/80 hover:text-neon-purple hover:border-neon-purple/70 hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.06c.53-1 1.83-2.05 3.77-2.05 4.04 0 4.79 2.66 4.79 6.12V21h-4v-5.5c0-1.31-.02-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9V21h-4V9z"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube" class="w-10 h-10 grid place-items-center rounded-lg border border-neon-purple/40 text-white/80 hover:text-neon-magenta hover:border-neon-magenta/70 hover:shadow-[0_0_20px_rgba(255,0,170,0.4)] transition">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5s-.2-1.6-.9-2.3c-.8-.9-1.7-.9-2.1-1C16.9 4 12 4 12 4s-4.9 0-8 .2c-.4.1-1.3.1-2.1 1C1.2 5.9 1 7.5 1 7.5S.8 9.3.8 11.2v1.6c0 1.9.2 3.7.2 3.7s.2 1.6.9 2.3c.8.9 1.9.9 2.4 1 1.7.2 7.7.2 7.7.2s4.9 0 8-.2c.4-.1 1.3-.1 2.1-1 .7-.7.9-2.3.9-2.3s.2-1.8.2-3.7v-1.6c0-1.9-.2-3.7-.2-3.7zM9.8 14.7V8.5l5.5 3.1-5.5 3.1z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="neon-line mb-6"></div>
+
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/40">
+      <p>© <span id="year"></span> Horizon PC Solution. All rights reserved.</p>
+      <p class="font-display tracking-[0.25em]">SYSTEM · ONLINE ✦ V.2026</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ JS ============ -->
+<script>
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Nav scroll state
+  const nav = document.getElementById('nav');
+  const onScroll = () => {
+    if (window.scrollY > 30) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('in'), i * 60);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Particles
+  (function spawnParticles() {
+    const wrap = document.getElementById('particles');
+    if (!wrap) return;
+    const colors = ['#ff2bd6', '#22d3ee', '#a855f7', '#ffffff'];
+    const count = window.innerWidth < 768 ? 18 : 40;
+    for (let i = 0; i < count; i++) {
+      const p = document.createElement('span');
+      p.className = 'particle';
+      const c = colors[Math.floor(Math.random() * colors.length)];
+      p.style.color = c;
+      p.style.background = c;
+      p.style.left = Math.random() * 100 + '%';
+      p.style.bottom = (-10 - Math.random() * 30) + 'px';
+      p.style.animationDuration = (8 + Math.random() * 14) + 's';
+      p.style.animationDelay = (-Math.random() * 14) + 's';
+      p.style.opacity = (0.3 + Math.random() * 0.6).toFixed(2);
+      const s = (1 + Math.random() * 2.5).toFixed(1);
+      p.style.width = s + 'px'; p.style.height = s + 'px';
+      wrap.appendChild(p);
+    }
+  })();
+
+  // Subtle hero parallax
+  const sun = document.querySelector('.hero-sun');
+  const cards = document.querySelectorAll('.hero-card');
+  window.addEventListener('mousemove', (e) => {
+    const x = (e.clientX / window.innerWidth - 0.5);
+    const y = (e.clientY / window.innerHeight - 0.5);
+    if (sun) sun.style.transform = `translateX(calc(-50% + ${x * 18}px)) translateY(${y * 10}px)`;
+    cards.forEach((c, i) => {
+      const f = (i + 1) * 6;
+      c.style.transform = `translate(${x * f}px, ${y * f}px) rotate(var(--rot, 0deg))`;
+    });
+  });
+
+  // Contact form
+  const form = document.getElementById('contactForm');
+  const success = document.getElementById('formSuccess');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    success.classList.remove('hidden');
+    form.reset();
+    setTimeout(() => success.classList.add('hidden'), 6000);
+  });
+</script>
+</body>
+</html>
